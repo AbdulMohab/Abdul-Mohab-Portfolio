@@ -1,0 +1,167 @@
+@import "../../global.scss";
+
+
+.works{
+    background-color: crimson;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    .arrow{
+        height: 50px;
+        position: absolute;
+        cursor: pointer;
+
+        @include mobile{
+            // display: none;
+        }
+        
+        &.left{
+            left: 100px;
+            transform: rotateY(180deg);
+
+            @include mobile{
+                margin: -93px!important;
+                width: 29px;
+                height: 28px;
+                border: 1px solid black;
+                background-color: black;
+                border-radius: 50%;
+            }
+        }
+
+        &.right{
+            right: 100px;
+
+            @include mobile{
+                margin: -93px!important;
+                width: 29px;
+                height: 28px;
+                border: 1px solid black;
+                background-color: black;
+                border-radius: 50%;
+            }
+        }
+    }
+    
+    .slider{
+        height: 350px;
+        display: flex;
+        position: absolute;
+        left: 0;
+        transition: all 1s ease-out;
+
+        .container{
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include mobile{
+            
+        }
+
+        .item{
+            width: 700px;
+            height: 100%;
+            background-color: white;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @include mobile{
+                display: flex;
+                flex-direction: column;
+                width: 78%!important;
+                height: 98%!important;
+                padding-bottom: 5px!important;
+        }
+
+            .left{
+                flex: 4;
+                height: 80%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                @include mobile{
+                    flex: 3;
+
+                    // height: 1380px!important;
+                }
+
+                .leftContainer{
+                    width: 90%;
+                    height: 70%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content:space-between;
+
+                    @include mobile{
+
+                        align-items: center;
+                        
+                }
+
+                    .imgContainer{
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        background-color: rgb(241, 179, 155);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        @include mobile{
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 50%;
+                        }
+
+
+                        img{
+                            width: 27px;    
+                        }
+                    }
+                    h2{
+                        font-style: 22px;
+                    }
+                    p{
+                        font-size: 15px;
+                    }
+                    span{
+                        font-size: 14px;
+                        font-weight: 600;
+                        text-decoration: underline;
+                    }
+                }
+            }
+            .right{
+                flex: 8;
+                height: 80%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+
+                @include mobile{
+                    flex: 2;
+                }
+
+                img{
+                    width: 500px;
+                    
+                    @include mobile{
+                        width: 95%!important;
+                        // margin-bottom: 10px!important;
+                    }
+                }
+            }
+
+
+            }
+        }
+    }
+}
